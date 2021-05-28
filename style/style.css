@@ -6,7 +6,8 @@
 .logincont {
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Helvetica, Arial, sans-serif;
     font-weight: 300;
-    margin-top: 5rem;
+    margin-top: 14.5rem;
+    margin-left: 39.5rem;
     justify-content: center;
     height: 400px;
     border: 1px solid black;
@@ -18,10 +19,6 @@
 html,
 body {
     min-height: 50vh;
-    width: auto;
-    margin: 0 0;
-    padding: 0;
-    display: grid;
     background-color: #a2a2a2;
 
 }
@@ -328,9 +325,8 @@ input:focus {
 
 .chatcont {
     font-family: "Roboto", sans-serif;
-    margin-top: 20rem;
-    margin-left: 5rem;
-    padding: 0;
+    margin-top: 45rem;
+    margin-left: 21.5rem;
     background-color: #a2a2a2;
     display: grid;
     justify-content: right;
