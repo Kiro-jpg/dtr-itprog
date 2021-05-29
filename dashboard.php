@@ -213,55 +213,44 @@ ul li ul li a {
 
     <nav role="navigation" class="primary-navigation">
         <ul>
-            <li class="homenav"><a href="#">Home</a></li>
-            <li class="nav123"><a href="#">DTR</a></li>
-            <li class="nav123"><a href="#">Dashboard</a></li>
-            <li class="nav123"><a href="#">Edit Profile</a></li>
+            <li class="homenav"><a href="/ITPROG/REPO/dtr-itprog/login.php">Home</a></li>
+            <li class="nav123"><a href="/dtr.php">DTR</a></li>
+            <li class="nav123"><a href="/dashboard.php">Dashboard</a></li>
+            <li class="nav123"><a href="/edit.php">Edit Profile</a></li>
         </ul>
     </nav>
+
+
+
     <div class="wrapper">
         <div class="table">
             <div class="row header blue">
                 <div class="cell">Username </div>
-                <div class="cell">Email </div>
+                <div class="cell">Name </div>
                 <div class="cell">Password </div>
-                <div class="cell">Active </div>
+                <div class="cell">Status </div>
                 <div class="cell"></div>
             </div>
-            <div class="row">
-                <div class="cell" data-title="Username">ninjalug </div>
-                <div class="cell" data-title="Email">misterninja@hotmail.com </div>
-                <div class="cell" data-title="Password">************ </div>
-                <div class="cell" data-title="Active">Yes </div>
-                <div class="cell" data-title="Active"><button class="dasheditbtn" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">Edit</button> </div>
-            </div>
-            <div class="row">
-                <div class="cell" data-title="Username">jsmith41 </div>
-                <div class="cell" data-title="Email">joseph.smith@gmail.com </div>
-                <div class="cell" data-title="Password">************ </div>
-                <div class="cell" data-title="Active">No </div>
-                <div class="cell" data-title="Active"><button class="dasheditbtn" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">Edit</button> </div>
-            </div>
-            <div class="row">
-                <div class="cell" data-title="Username">1337hax0r15 </div>
-                <div class="cell" data-title="Email">hackerdude1000@aol.com </div>
-                <div class="cell" data-title="Password">************ </div>
-                <div class="cell" data-title="Active">Yes </div>
-                <div class="cell" data-title="Active"><button class="dasheditbtn" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">Edit</button> </div>
-            </div>
-            <div class="row">
-                <div class="cell" data-title="Username">hairyharry19 </div>
-                <div class="cell" data-title="Email">harryharry@gmail.com </div>
-                <div class="cell" data-title="Password">************ </div>
-                <div class="cell" data-title="Active">Yes </div>
-                <div class="cell" data-title="Active"><button class="dasheditbtn" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">Edit</button> </div>
-            </div>
-        </div>
-    </div>
+           
+
+    <?php
+    require "connect.php";
+    mysqli_select_db($DBConnect, "dbemployee");
+$query = mysqli_query($DBConnect, "SELECT * FROM tblemployee ORDER BY empname");
+while ($retrieve = mysqli_fetch_array($query)) {
+    echo '<div class="row">';
+    echo '<div class="cell" data-title="Username">'.$retrieve["empid"].'</div>';
+    echo '<div class="cell" data-title="Name">'.$retrieve["empname"].'</div>';
+    echo '<div class="cell" data-title="Password">************ </div>';
+    echo '<div class="cell" data-title="Status">'. $retrieve["empstatus"] .'</div>';
+    echo '<div class="cell" data-title="Active"><button class="dasheditbtn" data-bs-toggle="modal"';
+    echo 'data-bs-target="#exampleModal">Edit</button> </div>';
+    echo '</div>';
+}
+echo '</div>';
+echo '</div>';
+?>
+
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -294,6 +283,7 @@ ul li ul li a {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
+   
 </body>
 
 </html>

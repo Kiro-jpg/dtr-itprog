@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log-In</title>
     <link rel="stylesheet" href="style\style.css">
+    <script type="text/javascript">
+    function confirmation() {
+        alert("Confirm Modification of Record?")
+    }
+    </script>
 </head>
 
 <body>
@@ -19,7 +24,7 @@
                     <h4>We are <span>TRIO</span></h4>
                     <p>Welcome back! Log in to your account to view today's schedule.</p>
                     <div class="floating-label">
-                        <input placeholder="Username" type="text" name="username" autocomplete="off">
+                        <input placeholder="Username" type="text" name="username" autocomplete="off" required>
                         <label for="username">Username:</label>
                         <div class="icon">
                             <svg enable-background="new 0 0 100 100" version="1.1" viewBox="0 0 100 100"

@@ -1,5 +1,15 @@
 <?php
-session_start()
+session_start();
+$user = $_SESSION['getLogin'];
+
+if ($user == NULL){
+    
+    $message = "wrong answer";
+    echo "<script type='text/javascript'>alert('$message');</script>";
+    echo "<script type='text/javascript'>window.location = '/ITPROG/REPO/dtr-itprog/login.php';</script>";
+    //header("location:login.php"); 
+}
+else 
 ?>
 <html>
 
