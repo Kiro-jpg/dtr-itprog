@@ -397,3 +397,18 @@ input:focus {
     box-shadow: none;
     padding: 5px;
 }
+
+.wrapper {
+    margin: 0 auto;
+    padding: 40px;
+    max-width: 800px;
+}
+
+.table {
+    margin: 0 0 40px 0;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    display: table;
+}
+
+

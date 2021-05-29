@@ -5,19 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <style>
-body {
-    font-family: "Helvetica Neue", Helvetica, Arial;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-    color: #3b3b3b;
-    -webkit-font-smoothing: antialiased;
-    background: #2b2b2b;
-}
-
 @media screen and (max-width: 580px) {
     body {
         font-size: 16px;
@@ -55,7 +47,7 @@ body {
 
 .row.header {
     font-weight: 900;
-    color: #ffffff;
+    color: black;
     background: #ea6153;
 }
 
@@ -64,7 +56,20 @@ body {
 }
 
 .row.blue {
-    background: #2980b9;
+    background: #dadad3;
+}
+
+.dasheditbtn {
+    background-color: black;
+    color: black;
+    border-radius: 5px;
+    width: 3rem;
+    height: 2.5rem;
+}
+
+.dasheditbtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0);
 }
 
 @media screen and (max-width: 580px) {
@@ -110,79 +115,185 @@ body {
         display: block;
     }
 }
+
+nav.primary-navigation {
+    margin: 0 auto;
+    display: block;
+    padding: 120px 0 0 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+nav.primary-navigation ul li.nav123 {
+    list-style: none;
+    margin: 0 auto;
+    border-left: 2px solid #dadad3;
+    display: inline-block;
+    padding: 0 30px;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    font-family: arvo;
+}
+
+nav.primary-navigation ul li.homenav {
+    list-style: none;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 0 30px;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    font-family: arvo;
+}
+
+nav.primary-navigation li a {
+    color: black;
+}
+
+nav.primary-navigation li a:hover {
+    color: #BDBDBD;
+}
+
+nav.primary-navigation li:hover {
+    cursor: pointer;
+}
+
+nav.primary-navigation ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    padding-left: 0;
+    left: 0;
+    display: none;
+    background: white;
+}
+
+nav.primary-navigation ul li:hover>ul,
+nav.primary-navigation ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    min-width: 250px;
+    text-align: left;
+    padding-top: 20px;
+    box-shadow: 0px 3px 5px -1px #ccc;
+}
+
+nav.primary-navigation ul li ul li {
+    clear: both;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    border-style: none;
+}
+
+nav.primary-navigation ul li ul li.nav123n a:hover {
+    padding-left: 10px;
+    border-left: 2px solid #3ca0e7;
+    transition: all 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3CA0E7;
+}
+
+ul li ul li a {
+    transition: all 0.5s ease;
+}
 </style>
 
 <body>
+
+
+
+    <nav role="navigation" class="primary-navigation">
+        <ul>
+            <li class="homenav"><a href="#">Home</a></li>
+            <li class="nav123"><a href="#">DTR</a></li>
+            <li class="nav123"><a href="#">Dashboard</a></li>
+            <li class="nav123"><a href="#">Edit Profile</a></li>
+        </ul>
+    </nav>
     <div class="wrapper">
-        <div class="table">
-            <div class="row header">
-                <div class="cell">Name </div>
-                <div class="cell">Age </div>
-                <div class="cell">Occupation </div>
-                <div class="cell">Location </div>
-            </div>
-            <div class="row">
-                <div class="cell" data-title="Name">Luke Peters </div>
-                <div class="cell" data-title="Age">25 </div>
-                <div class="cell" data-title="Occupation">Freelance Web Developer </div>
-                <div class="cell" data-title="Location">Brookline,
-                    MA </div>
-            </div>
-            <div class="row">
-                <div class="cell" data-title="Name">Joseph Smith </div>
-                <div class="cell" data-title="Age">27 </div>
-                <div class="cell" data-title="Occupation">Project Manager </div>
-                <div class="cell" data-title="Location">Somerville,
-                    MA </div>
-            </div>
-            <div class="row">
-                <div class="cell" data-title="Name">Maxwell Johnson </div>
-                <div class="cell" data-title="Age">26 </div>
-                <div class="cell" data-title="Occupation">UX Architect & Designer </div>
-                <div class="cell" data-title="Location">Arlington,
-                    MA </div>
-            </div>
-            <div class="row">
-                <div class="cell" data-title="Name">Harry Harrison </div>
-                <div class="cell" data-title="Age">25 </div>
-                <div class="cell" data-title="Occupation">Front-End Developer </div>
-                <div class="cell" data-title="Location">Boston,
-                    MA </div>
-            </div>
-        </div>
         <div class="table">
             <div class="row header blue">
                 <div class="cell">Username </div>
                 <div class="cell">Email </div>
                 <div class="cell">Password </div>
                 <div class="cell">Active </div>
+                <div class="cell"></div>
             </div>
             <div class="row">
                 <div class="cell" data-title="Username">ninjalug </div>
                 <div class="cell" data-title="Email">misterninja@hotmail.com </div>
                 <div class="cell" data-title="Password">************ </div>
                 <div class="cell" data-title="Active">Yes </div>
+                <div class="cell" data-title="Active"><button class="dasheditbtn" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Edit</button> </div>
             </div>
             <div class="row">
                 <div class="cell" data-title="Username">jsmith41 </div>
                 <div class="cell" data-title="Email">joseph.smith@gmail.com </div>
                 <div class="cell" data-title="Password">************ </div>
                 <div class="cell" data-title="Active">No </div>
+                <div class="cell" data-title="Active"><button class="dasheditbtn" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Edit</button> </div>
             </div>
             <div class="row">
                 <div class="cell" data-title="Username">1337hax0r15 </div>
                 <div class="cell" data-title="Email">hackerdude1000@aol.com </div>
                 <div class="cell" data-title="Password">************ </div>
                 <div class="cell" data-title="Active">Yes </div>
+                <div class="cell" data-title="Active"><button class="dasheditbtn" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Edit</button> </div>
             </div>
             <div class="row">
                 <div class="cell" data-title="Username">hairyharry19 </div>
                 <div class="cell" data-title="Email">harryharry@gmail.com </div>
                 <div class="cell" data-title="Password">************ </div>
                 <div class="cell" data-title="Active">Yes </div>
+                <div class="cell" data-title="Active"><button class="dasheditbtn" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Edit</button> </div>
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label for="user">Username:</label>
+                        <input placeholder="Username" type="text" name="user" autocomplete="off"><br>
+                        <label for="pass">Password:</label>
+                        <input placeholder="Password" type="text" name="pass" autocomplete="off"><br>
+                        <label for="stat">Status:</label>
+                        <input placeholder="Status" type="text" name="stat" autocomplete="off"><br>
+                        <label for="gen">Gender:</label>
+                        <input placeholder="Gender" type="text" name="gen" autocomplete="off"><br>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
