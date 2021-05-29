@@ -217,7 +217,7 @@ ul li ul li a {
             <li class="nav123"><a href="/dtr.php">DTR</a></li>
             <li class="nav123"><a href="/dashboard.php">Dashboard</a></li>
             <li class="nav123"><a href="/edit.php">Edit DTR</a></li>
-            <li class="nav123"><a href="/edit.php">Logout</a></li>
+            <li class="nav123"><a href="/ITPROG/REPO/dtr-itprog/logout.php">Logout</a></li>
         </ul>
     </nav>
 
@@ -230,7 +230,7 @@ ul li ul li a {
                 <div class="cell">Name </div>
                 <div class="cell">Password </div>
                 <div class="cell">Status </div>
-                <div class="cell"></div>
+               
             </div>
 
 
@@ -244,15 +244,15 @@ ul li ul li a {
                 echo '<div class="cell" data-title="Name">' . $retrieve["empname"] . '</div>';
                 echo '<div class="cell" data-title="Password">************ </div>';
                 echo '<div class="cell" data-title="Status">' . $retrieve["empstatus"] . '</div>';
-                echo '<div class="cell" data-title="Active"><button class="dasheditbtn" data-bs-toggle="modal"';
-                echo 'data-bs-target="#exampleModal">Edit</button> </div>';
+                
                 echo '</div>';
             }
             echo '</div>';
             echo '</div>';
             ?>
 
-
+<div class="cell" data-title="Active"><button class="dasheditbtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button> 
+</div>
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
@@ -263,24 +263,65 @@ ul li ul li a {
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form>
-                                <label for="user">Username:</label>
-                                <input placeholder="Username" type="text" name="user" autocomplete="off"><br>
-                                <label for="pass">Password:</label>
-                                <input placeholder="Password" type="text" name="pass" autocomplete="off"><br>
-                                <label for="stat">Status:</label>
-                                <input placeholder="Status" type="text" name="stat" autocomplete="off"><br>
-                                <label for="gen">Gender:</label>
-                                <input placeholder="Gender" type="text" name="gen" autocomplete="off"><br>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
+                        <form action='<?php echo $_SERVER["PHP_SELF"]; ?>' method='post'>
+        Search Student : <input type='text' name='eid' size='10' /><br />
+        <input type='submit' name='search' value='Search'>
+    </form>
+    <?php
+    $SERVER = $_SERVER["PHP_SELF"];
+    $q = '"';
+require "connect.php";
+echo '<form action='.$q.$SERVER.$q.'method="post">';
+if (isset($_POST["search"])) {
+
+    $eid = $_POST["eid"];
+    mysqli_select_db($DBConnect, "dbemployee");
+    $query = mysqli_query($DBConnect, "SELECT * FROM tblemployee WHERE empid='$eid'");
+    $cell = mysqli_fetch_array($query);
+    $id = $cell["empid"];
+    $name = $cell["empname"];
+    $status = $cell["empstatus"];
+    $gender = $cell["empgender"];
+    echo "<input type='hidden' name='id' value='" . $id . "'size='30'>";
+    echo "Employee Name : <input type='text' name='name' value='" . $name . "' size='30'><br/>";
+    echo "Employee Status : <input type='text' name='status' value='" . $status . "' size='30'><br/>";
+    echo "Employee Gender : <input type='text' name='gender' value='" . $gender . "' size='30'><br/>";
+    echo '<div class="modal-footer">';
+    echo '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>';
+    echo '<input type="submit" onclick="confirmation()" class="btn btn-primary" name="edit" value="Save Changes"></input>';
+    echo '</div>';
+    
+    echo "</form>";
+}
+
+
+echo '</div>';
+?>
+           
                 </div>
             </div>
+            </div>
+            <?php
+            if (isset($_POST["edit"])) {
+                $newID = $_POST["id"];
+                $newName = $_POST["name"];
+                $newStat = $_POST["status"];
+                $newGender = $_POST["gender"];
+            
+                mysqli_select_db($DBConnect, "dbemployee");
+                mysqli_query($DBConnect, "UPDATE tblemployee SET empname='$newName', empstatus='$newStat',
+                        empgender='$newGender' WHERE empid='$newID'") or die(mysqli_error());
+            
+                echo "<h3>Record has been saved. Please check the modification below.</h3>";
+            
+                $query = mysqli_query($DBConnect, "SELECT * FROM tblemployee WHERE empid='$newID'");
+                $fetch = mysqli_fetch_array($query);
+                echo "Employee Name : " . $fetch["empname"] . "<br />";
+                echo "Employee Status : " . $fetch["empstatus"] . "<br />";
+                echo "Employee Gender : " . $fetch["empgender"] . "<br />";
+            
+            }
+?>            
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
