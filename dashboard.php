@@ -7,205 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style\dashboardstyle.css">
+    <link rel="stylesheet" href="style\navstyle.css">
     <title>Document</title>
 </head>
-<style>
-@media screen and (max-width: 580px) {
-    body {
-        font-size: 16px;
-        line-height: 22px;
-    }
-}
 
-.wrapper {
-    margin: 0 auto;
-    padding: 40px;
-    max-width: 800px;
-}
-
-.table {
-    margin: 0 0 40px 0;
-    width: 100%;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    display: table;
-}
-
-@media screen and (max-width: 580px) {
-    .table {
-        display: block;
-    }
-}
-
-.row {
-    display: table-row;
-    background: #f6f6f6;
-}
-
-.row:nth-of-type(odd) {
-    background: #e9e9e9;
-}
-
-.row.header {
-    font-weight: 900;
-    color: black;
-    background: #ea6153;
-}
-
-.row.green {
-    background: #27ae60;
-}
-
-.row.blue {
-    background: #dadad3;
-}
-
-.dasheditbtn {
-    background-color: black;
-    color: black;
-    border-radius: 5px;
-    width: 3rem;
-    height: 2.5rem;
-}
-
-.dasheditbtn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0);
-}
-
-@media screen and (max-width: 580px) {
-    .row {
-        padding: 14px 0 7px;
-        display: block;
-    }
-
-    .row.header {
-        padding: 0;
-        height: 6px;
-    }
-
-    .row.header .cell {
-        display: none;
-    }
-
-    .row .cell {
-        margin-bottom: 10px;
-    }
-
-    .row .cell:before {
-        margin-bottom: 3px;
-        content: attr(data-title);
-        min-width: 98px;
-        font-size: 10px;
-        line-height: 10px;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: #969696;
-        display: block;
-    }
-}
-
-.cell {
-    padding: 6px 12px;
-    display: table-cell;
-}
-
-@media screen and (max-width: 580px) {
-    .cell {
-        padding: 2px 16px;
-        display: block;
-    }
-}
-
-nav.primary-navigation {
-    margin: 0 auto;
-    display: block;
-    padding: 120px 0 0 0;
-    text-align: center;
-    font-size: 16px;
-}
-
-nav.primary-navigation ul li.nav123 {
-    list-style: none;
-    margin: 0 auto;
-    border-left: 2px solid #dadad3;
-    display: inline-block;
-    padding: 0 30px;
-    position: relative;
-    text-decoration: none;
-    text-align: center;
-    font-family: arvo;
-}
-
-nav.primary-navigation ul li.homenav {
-    list-style: none;
-    margin: 0 auto;
-    display: inline-block;
-    padding: 0 30px;
-    position: relative;
-    text-decoration: none;
-    text-align: center;
-    font-family: arvo;
-}
-
-nav.primary-navigation li a {
-    color: black;
-}
-
-nav.primary-navigation li a:hover {
-    color: #BDBDBD;
-}
-
-nav.primary-navigation li:hover {
-    cursor: pointer;
-}
-
-nav.primary-navigation ul li ul {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    padding-left: 0;
-    left: 0;
-    display: none;
-    background: white;
-}
-
-nav.primary-navigation ul li:hover>ul,
-nav.primary-navigation ul li ul:hover {
-    visibility: visible;
-    opacity: 1;
-    display: block;
-    min-width: 250px;
-    text-align: left;
-    padding-top: 20px;
-    box-shadow: 0px 3px 5px -1px #ccc;
-}
-
-nav.primary-navigation ul li ul li {
-    clear: both;
-    width: 100%;
-    text-align: left;
-    margin-bottom: 20px;
-    border-style: none;
-}
-
-nav.primary-navigation ul li ul li.nav123n a:hover {
-    padding-left: 10px;
-    border-left: 2px solid #3ca0e7;
-    transition: all 0.3s ease;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    color: #3CA0E7;
-}
-
-ul li ul li a {
-    transition: all 0.5s ease;
-}
-</style>
 
 <body>
 
@@ -214,9 +20,8 @@ ul li ul li a {
     <nav role="navigation" class="primary-navigation">
         <ul>
             <li class="homenav"><a href="/ITPROG/REPO/dtr-itprog/login.php">Home</a></li>
-            <li class="nav123"><a href="/dtr.php">DTR</a></li>
-            <li class="nav123"><a href="/dashboard.php">Dashboard</a></li>
-            <li class="nav123"><a href="/edit.php">Edit DTR</a></li>
+            <li class="nav123"><a href=" /ITPROG/REPO/dtr-itprog/dtr.php">DTR</a></li>
+            <li class="nav123"><a href="/ITPROG/REPO/dtr-itprog/dashboard.php">Dashboard</a></li>
             <li class="nav123"><a href="/ITPROG/REPO/dtr-itprog/logout.php">Logout</a></li>
         </ul>
     </nav>
@@ -230,7 +35,7 @@ ul li ul li a {
                 <div class="cell">Name </div>
                 <div class="cell">Password </div>
                 <div class="cell">Status </div>
-               
+
             </div>
 
 
@@ -244,89 +49,242 @@ ul li ul li a {
                 echo '<div class="cell" data-title="Name">' . $retrieve["empname"] . '</div>';
                 echo '<div class="cell" data-title="Password">************ </div>';
                 echo '<div class="cell" data-title="Status">' . $retrieve["empstatus"] . '</div>';
-                
+
                 echo '</div>';
             }
             echo '</div>';
             echo '</div>';
             ?>
+            <div class="btncon">
 
-<div class="cell" data-title="Active"><button class="dasheditbtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button> 
-</div>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                        <form action='<?php echo $_SERVER["PHP_SELF"]; ?>' method='post'>
-        Search Student : <input type='text' name='eid' size='10' /><br />
-        <input type='submit' name='search' value='Search'>
-    </form>
-    <?php
-    $SERVER = $_SERVER["PHP_SELF"];
-    $q = '"';
-require "connect.php";
-echo '<form action='.$q.$SERVER.$q.'method="post">';
-if (isset($_POST["search"])) {
-
-    $eid = $_POST["eid"];
-    mysqli_select_db($DBConnect, "dbemployee");
-    $query = mysqli_query($DBConnect, "SELECT * FROM tblemployee WHERE empid='$eid'");
-    $cell = mysqli_fetch_array($query);
-    $id = $cell["empid"];
-    $name = $cell["empname"];
-    $status = $cell["empstatus"];
-    $gender = $cell["empgender"];
-    echo "<input type='hidden' name='id' value='" . $id . "'size='30'>";
-    echo "Employee Name : <input type='text' name='name' value='" . $name . "' size='30'><br/>";
-    echo "Employee Status : <input type='text' name='status' value='" . $status . "' size='30'><br/>";
-    echo "Employee Gender : <input type='text' name='gender' value='" . $gender . "' size='30'><br/>";
-    echo '<div class="modal-footer">';
-    echo '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>';
-    echo '<input type="submit" onclick="confirmation()" class="btn btn-primary" name="edit" value="Save Changes"></input>';
-    echo '</div>';
-    
-    echo "</form>";
-}
-
-
-echo '</div>';
-?>
-           
+                <!-- ADD -->
+                <div class="btnbtn" data-title="Active"><button class="modbtn1" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Add</button>
                 </div>
-            </div>
-            </div>
-            <?php
-            if (isset($_POST["edit"])) {
-                $newID = $_POST["id"];
-                $newName = $_POST["name"];
-                $newStat = $_POST["status"];
-                $newGender = $_POST["gender"];
-            
-                mysqli_select_db($DBConnect, "dbemployee");
-                mysqli_query($DBConnect, "UPDATE tblemployee SET empname='$newName', empstatus='$newStat',
-                        empgender='$newGender' WHERE empid='$newID'") or die(mysqli_error());
-            
-                echo "<h3>Record has been saved. Please check the modification below.</h3>";
-            
-                $query = mysqli_query($DBConnect, "SELECT * FROM tblemployee WHERE empid='$newID'");
-                $fetch = mysqli_fetch_array($query);
-                echo "Employee Name : " . $fetch["empname"] . "<br />";
-                echo "Employee Status : " . $fetch["empstatus"] . "<br />";
-                echo "Employee Gender : " . $fetch["empgender"] . "<br />";
-            
-            }
-?>            
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action='<?php echo $_SERVER["PHP_SELF"]; ?>' method='post'>
+                                    Search Student : <input type='text' name='eid' size='10' /><br />
+                                    <input type='submit' name='search' value='Search'>
+                                </form>
+                                <?php
+                                $SERVER = $_SERVER["PHP_SELF"];
+                                $q = '"';
+                                require "connect.php";
+                                echo '<form action=' . $q . $SERVER . $q . 'method="post">';
+                                if (isset($_POST["search"])) {
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-                crossorigin="anonymous">
-            </script>
+                                    $eid = $_POST["eid"];
+                                    mysqli_select_db($DBConnect, "dbemployee");
+                                    $query = mysqli_query($DBConnect, "SELECT * FROM tblemployee WHERE empid='$eid'");
+                                    $cell = mysqli_fetch_array($query);
+                                    $id = $cell["empid"];
+                                    $name = $cell["empname"];
+                                    $status = $cell["empstatus"];
+                                    $gender = $cell["empgender"];
+                                    echo "<input type='hidden' name='id' value='" . $id . "'size='30'>";
+                                    echo "Employee Name : <input type='text' name='name' value='" . $name . "' size='30'><br/>";
+                                    echo "Employee Status : <input type='text' name='status' value='" . $status . "' size='30'><br/>";
+                                    echo "Employee Gender : <input type='text' name='gender' value='" . $gender . "' size='30'><br/>";
+                                    echo '<div class="modal-footer">';
+                                    echo '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>';
+                                    echo '<input type="submit" onclick="confirmation()" class="btn btn-primary" name="edit" value="Save Changes"></input>';
+                                    echo '</div>';
+
+                                    echo "</form>";
+                                }
+
+
+                                echo '</div>';
+                                ?>
+
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                    if (isset($_POST["edit"])) {
+                        $newID = $_POST["id"];
+                        $newName = $_POST["name"];
+                        $newStat = $_POST["status"];
+                        $newGender = $_POST["gender"];
+
+                        mysqli_select_db($DBConnect, "dbemployee");
+                        mysqli_query($DBConnect, "UPDATE tblemployee SET empname='$newName', empstatus='$newStat',
+                        empgender='$newGender' WHERE empid='$newID'") or die(mysqli_error());
+
+                        echo "<h3>Record has been saved. Please check the modification below.</h3>";
+
+                        $query = mysqli_query($DBConnect, "SELECT * FROM tblemployee WHERE empid='$newID'");
+                        $fetch = mysqli_fetch_array($query);
+                        echo "Employee Name : " . $fetch["empname"] . "<br />";
+                        echo "Employee Status : " . $fetch["empstatus"] . "<br />";
+                        echo "Employee Gender : " . $fetch["empgender"] . "<br />";
+                    }
+                    ?>
+
+                    <!-- EDIT -->
+                    <div class="btnbtn" data-title="Active"><button class="modbtn2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Edit</button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action='<?php echo $_SERVER["PHP_SELF"]; ?>' method='post'>
+                                        Search Student : <input type='text' name='eid' size='10' /><br />
+                                        <input type='submit' name='search' value='Search'>
+                                    </form>
+                                    <?php
+                                    $SERVER = $_SERVER["PHP_SELF"];
+                                    $q = '"';
+                                    require "connect.php";
+                                    echo '<form action=' . $q . $SERVER . $q . 'method="post">';
+                                    if (isset($_POST["search"])) {
+
+                                        $eid = $_POST["eid"];
+                                        mysqli_select_db($DBConnect, "dbemployee");
+                                        $query = mysqli_query($DBConnect, "SELECT * FROM tblemployee WHERE empid='$eid'");
+                                        $cell = mysqli_fetch_array($query);
+                                        $id = $cell["empid"];
+                                        $name = $cell["empname"];
+                                        $status = $cell["empstatus"];
+                                        $gender = $cell["empgender"];
+                                        echo "<input type='hidden' name='id' value='" . $id . "'size='30'>";
+                                        echo "Employee Name : <input type='text' name='name' value='" . $name . "' size='30'><br/>";
+                                        echo "Employee Status : <input type='text' name='status' value='" . $status . "' size='30'><br/>";
+                                        echo "Employee Gender : <input type='text' name='gender' value='" . $gender . "' size='30'><br/>";
+                                        echo '<div class="modal-footer">';
+                                        echo '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>';
+                                        echo '<input type="submit" onclick="confirmation()" class="btn btn-primary" name="edit" value="Save Changes"></input>';
+                                        echo '</div>';
+
+                                        echo "</form>";
+                                    }
+
+
+                                    echo '</div>';
+                                    ?>
+
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                        if (isset($_POST["edit"])) {
+                            $newID = $_POST["id"];
+                            $newName = $_POST["name"];
+                            $newStat = $_POST["status"];
+                            $newGender = $_POST["gender"];
+
+                            mysqli_select_db($DBConnect, "dbemployee");
+                            mysqli_query($DBConnect, "UPDATE tblemployee SET empname='$newName', empstatus='$newStat',
+                        empgender='$newGender' WHERE empid='$newID'") or die(mysqli_error());
+
+                            echo "<h3>Record has been saved. Please check the modification below.</h3>";
+
+                            $query = mysqli_query($DBConnect, "SELECT * FROM tblemployee WHERE empid='$newID'");
+                            $fetch = mysqli_fetch_array($query);
+                            echo "Employee Name : " . $fetch["empname"] . "<br />";
+                            echo "Employee Status : " . $fetch["empstatus"] . "<br />";
+                            echo "Employee Gender : " . $fetch["empgender"] . "<br />";
+                        }
+                        ?>
+
+                        <!-- Delete -->
+                        <div class="btnbtn" data-title="Active"><button class="modbtn3" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Delete</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action='<?php echo $_SERVER["PHP_SELF"]; ?>' method='post'>
+                                            Search Student : <input type='text' name='eid' size='10' /><br />
+                                            <input type='submit' name='search' value='Search'>
+                                        </form>
+                                        <?php
+                                        $SERVER = $_SERVER["PHP_SELF"];
+                                        $q = '"';
+                                        require "connect.php";
+                                        echo '<form action=' . $q . $SERVER . $q . 'method="post">';
+                                        if (isset($_POST["search"])) {
+
+                                            $eid = $_POST["eid"];
+                                            mysqli_select_db($DBConnect, "dbemployee");
+                                            $query = mysqli_query($DBConnect, "SELECT * FROM tblemployee WHERE empid='$eid'");
+                                            $cell = mysqli_fetch_array($query);
+                                            $id = $cell["empid"];
+                                            $name = $cell["empname"];
+                                            $status = $cell["empstatus"];
+                                            $gender = $cell["empgender"];
+                                            echo "<input type='hidden' name='id' value='" . $id . "'size='30'>";
+                                            echo "Employee Name : <input type='text' name='name' value='" . $name . "' size='30'><br/>";
+                                            echo "Employee Status : <input type='text' name='status' value='" . $status . "' size='30'><br/>";
+                                            echo "Employee Gender : <input type='text' name='gender' value='" . $gender . "' size='30'><br/>";
+                                            echo '<div class="modal-footer">';
+                                            echo '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>';
+                                            echo '<input type="submit" onclick="confirmation()" class="btn btn-primary" name="edit" value="Save Changes"></input>';
+                                            echo '</div>';
+
+                                            echo "</form>";
+                                        }
+
+
+                                        echo '</div>';
+                                        ?>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                            if (isset($_POST["edit"])) {
+                                $newID = $_POST["id"];
+                                $newName = $_POST["name"];
+                                $newStat = $_POST["status"];
+                                $newGender = $_POST["gender"];
+
+                                mysqli_select_db($DBConnect, "dbemployee");
+                                mysqli_query($DBConnect, "UPDATE tblemployee SET empname='$newName', empstatus='$newStat',
+                        empgender='$newGender' WHERE empid='$newID'") or die(mysqli_error());
+
+                                echo "<h3>Record has been saved. Please check the modification below.</h3>";
+
+                                $query = mysqli_query($DBConnect, "SELECT * FROM tblemployee WHERE empid='$newID'");
+                                $fetch = mysqli_fetch_array($query);
+                                echo "Employee Name : " . $fetch["empname"] . "<br />";
+                                echo "Employee Status : " . $fetch["empstatus"] . "<br />";
+                                echo "Employee Gender : " . $fetch["empgender"] . "<br />";
+                            }
+                            ?>
+
+                        </div>
+
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+                            crossorigin="anonymous">
+                        </script>
 
 </body>
 
