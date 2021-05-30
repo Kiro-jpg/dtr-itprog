@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(isset($_SESSION['getLogin'])) {
+    
+    header("Location:dtr.php"); // redirects them to homepage
+    exit; // for good measure
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

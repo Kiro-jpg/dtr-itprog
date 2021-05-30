@@ -27,12 +27,13 @@ $hinmour = 0;
 $overmour = 0;
 
 $counter = ($eday - $sday) + 1;
+echo $counter;
 
 if (strcmp($emonth, $smonth) != 0) {
     echo "Log not validated!";
 } else if (strcmp($eyear, $syear) != 0) {
     echo "Log not validated!";
-} else if ($counter <= 6) {
+} else if ($counter <= 6 && $counter > 0) {
     echo "<h3>Date of Effectivity: ", $smonth, ", ", $sday, ", ", $syear, " | Cutoff Date: ", $emonth, ", ", $eday, ", ", $eyear, "</h3>";
     echo "<table border='5'>
     <tr>
