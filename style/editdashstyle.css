@@ -1,0 +1,164 @@
+html,
+body {
+    background-color: #dadad3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.addcon {
+    display: block;
+    margin-bottom: 10rem;
+    margin-left: 5rem;
+    margin-top: 5rem;
+    height: 370px;
+    width: 23%;
+    background-color: #dadad3;
+    border: 1px solid #000000;
+    box-shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
+}
+
+.addbtn {
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    background-image: none;
+    background-color: #dadad3;
+    box-shadow: none;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 23.6rem;
+    width: 60px;
+}
+
+.msg {
+    margin-top: 1rem;
+    margin-left: 8.5rem;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.edeet {
+    height: 750px;
+    width: 100%;
+    margin-left: 1.3rem;
+}
+
+.in1 {
+    margin-top: 2rem;
+    margin-left: 7.15rem;
+    margin-bottom: 1rem;
+}
+
+.in2 {
+    margin-left: 5.45rem;
+    margin-bottom: 1rem;
+}
+
+.in3 {
+    margin-left: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.in4 {
+    margin-left: 3.7rem;
+    margin-bottom: 1rem;
+}
+
+.in5 {
+    margin-left: 5.15rem;
+    margin-bottom: 1rem;
+}
+
+.in6 {
+    margin-left: 5rem;
+    margin-bottom: 1rem;
+}
+
+.bigcon {
+    width: 100%;
+    display: flex;
+    margin-left: 30rem;
+}
+
+.edcon {
+    margin-top: 6rem;
+    position: fixed;
+    margin-left: 40rem;
+}
+
+.shedcon {
+    position: fixed;
+    margin-top: 11rem;
+    margin-left: 40rem;
+    display: block;
+    height: 285px;
+    width: 23%;
+    background-color: #dadad3;
+    border: 1px solid #000000;
+    box-shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
+}
+
+.edin1 {
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+}
+
+.edin2 {
+    margin-left: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.edin3 {
+    margin-left: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.edin4 {
+    margin-left: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.edin5 {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.edform {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+}
+
+.editbtn {
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    background-color: #dadad3;
+    background-image: none;
+    box-shadow: none;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-left: 22rem;
+    margin-right: 1.2rem;
+    width: 120px;
+}
+
+.delcon {
+    position: fixed;
+    margin-left: 60rem;
+    margin-top: 6rem;
+    display: inline-block;
+}
+
+.msg2 {
+    position: relative;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 7rem;
+    margin-right: 1.7rem;
+}
+
+.delfrom {
+    position: fixed;
+    margin-left: 40rem;
+    margin-top: 7rem;
+}

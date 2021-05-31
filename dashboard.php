@@ -51,7 +51,7 @@
                 echo '<div class="cell" data-title="ID">' . $retrieve["empid"] . '</div>';
                 echo '<div class="cell" data-title="Name">' . $retrieve["empname"] . '</div>';
                 echo '<div class="cell" data-title="Username">' . $retrieve["usercred"] . '</div>';
-                echo '<div class="cell" data-title="Password">'. $password = str_repeat("*", strlen($retrieve["pwd"])). '</div>';
+                echo '<div class="cell" data-title="Password">' . $password = str_repeat("*", strlen($retrieve["pwd"])) . '</div>';
                 echo '<div class="cell" data-title="Status">' . $retrieve["empstatus"] . '</div>';
                 echo '<div class="cell" data-title="Gender">' . $retrieve["empgender"] . '</div>';
 
@@ -60,20 +60,54 @@
             echo '</div>';
             echo '</div>';
             ?>
-        
 
-                <!-- ADD -->
-                <div class="btnbtn" data-title="Active">
-                        <button class="modbtn1" ><a href="/ITPROG/REPO/dtr-itprog/editdash.php">Modify</a></button>
-                
+
+            <!-- ADD -->
+            <div class="btnbtn" data-title="Active">
+                <button class="modbtn1"><a href="/ITPROG/REPO/dtr-itprog/editdash.php">Modify</a></button>
+
+            </div>
+
+            <div class="chatcont">
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        Simple Chat Client
+                    </div>
+
+                    <form method="POST" class="feedback-body">
+                        <textarea ,type="text" class="feedback-body__email" placeholder="Client Message"
+                            name="txtMessage"></textarea>
+                        <?php
+                        $host = "127.0.0.1";
+                        $port = 50001;
+                        set_time_limit(0);
+                        if (isset($_POST["btnSend"])) {
+
+                            $msg = $_REQUEST["txtMessage"];
+                            $sock = socket_create(AF_INET, SOCK_STREAM, 0);
+                            socket_connect($sock, $host, $port);
+
+                            socket_write($sock, $msg, strlen($msg));
+
+                            $reply = socket_read($sock, 1924);
+                            $reply = trim($reply);
+                            $reply = "Server says:\n" . $reply;
+                        }
+                        ?>
+                        <textarea ,type="text" class="feedback-body__message"
+                            placeholder="Server Reply:"><?php echo @$reply; ?></textarea>
+                        <button type="submit" name="btnSend" class="feedback-body__submit">SEND</button>
+                    </form>
+
                 </div>
+            </div>
 
 
-                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-                            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-                            crossorigin="anonymous">
-                        </script>
-                        <script src="style\main.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+                crossorigin="anonymous">
+            </script>
+            <script src="style\main.js"></script>
 
 
 </body>

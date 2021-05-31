@@ -1,0 +1,106 @@
+html,
+body {
+    background-color: #dadad3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.formedit {
+    width: 10%;
+    margin-left: 5rem;
+}
+
+.edeet {
+    height: 750px;
+    width: 100%;
+    margin-left: 1.3rem;
+}
+
+.contform {
+    display: block;
+    margin-bottom: 10rem;
+    height: 450px;
+    width: 25%;
+    background-color: #dadad3;
+    border: 1px solid #000000;
+    box-shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
+}
+
+.inbox1 {
+    margin-top: 1.8rem;
+    margin-bottom: 1rem;
+    margin-left: 2.3rem;
+}
+
+.inbox2 {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.inbox3 {
+    margin-bottom: 1rem;
+    margin-left: 2.2rem;
+}
+
+.inbox4 {
+    margin-bottom: 1rem;
+    margin-left: 2.8rem;
+}
+
+.inbox5 {
+    margin-bottom: 1rem;
+    margin-left: 1.6rem;
+}
+
+.inbox6 {
+    margin-bottom: 1rem;
+    margin-left: 2.7rem;
+}
+
+.inbox7 {
+    margin-bottom: 1rem;
+    margin-left: 3.2rem;
+}
+
+.inbox8 {
+    margin-bottom: 1rem;
+    margin-left: 2.4rem;
+}
+
+.inbox9 {
+    margin-bottom: 1rem;
+    margin-left: 2.3rem;
+}
+
+.concon {
+    display: flex;
+}
+
+.concon2 {
+    margin-left: 28rem;
+    margin-top: 10rem;
+}
+
+.concon3 {
+    margin-left: 50rem;
+    height: 30px;
+    position: fixed;
+}
+
+.delform {
+    display: flexbox;
+    margin-right: 10rem;
+}
+
+.indel {
+    margin-left: 1.3rem;
+}
+
+.msg {
+    margin-top: 10rem;
+    margin-right: 2.5rem;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 700;
+}

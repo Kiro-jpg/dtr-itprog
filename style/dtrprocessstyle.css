@@ -1,8 +1,9 @@
 html,
 body {
-    height: 100vh;
-    background-color: #a2a2a2;
-
+    background-color: #dadad3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .table {
@@ -113,8 +114,7 @@ body {
 .chatcont {
     font-family: "Roboto", sans-serif;
     margin-top: 0rem;
-    margin-left: 21.5rem;
-    background-color: #a2a2a2;
+    margin-left: 21rem;
     display: grid;
     justify-content: right;
     flex-direction: row;
@@ -189,4 +189,23 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 10rem;
+}
+
+.modbtn1 {
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    background-image: none;
+    background-color: #dadad3;
+    box-shadow: none;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
 }

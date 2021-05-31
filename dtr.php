@@ -128,13 +128,8 @@ if ($user == NULL) {
                     echo "</table>";
                     ?>
                     <br />
-                    <input type="submit" name="enter" class="subbtn" value="Save"><input type="reset">
+                    <input type="submit" name="enter" class="subbtn" value="Save"><input type="reset" class="subbtn1">
 
-                </form>
-                <form action="dtrdelete.php" method="post">
-                    <h2 class="deltext">[Delete Data]</h2>
-                    Enter Log ID: <input type="text" name="empID" size="8"><br>
-                    <input type="submit" name="enter" class="deletebtn" value="Delete">
                 </form>
             </div>
 

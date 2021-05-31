@@ -144,45 +144,45 @@
         echo '</div>';
         ?>
 
-        
 
-<button class="modbtn1" ><a href="/ITPROG/REPO/dtr-itprog/editdtr.php" target="_Blank">Modify</a></button>
+
+        <button class="modbtn1"><a href="/ITPROG/REPO/dtr-itprog/editdtr.php" target="_Blank">Modify</a></button>
         <!-- Modal -->
         <div class="chatcont">
-                <div class="feedback-card">
-                    <div class="feedback-header">
-                        Simple Chat Client
-                    </div>
-
-                    <form method="POST" class="feedback-body">
-                        <textarea ,type="text" class="feedback-body__email" placeholder="Client Message"
-                            name="txtMessage"></textarea>
-                        <?php
-                        $host = "127.0.0.1";
-                        $port = 50001;
-                        set_time_limit(0);
-                        if (isset($_POST["btnSend"])) {
-
-                            $msg = $_REQUEST["txtMessage"];
-                            $sock = socket_create(AF_INET, SOCK_STREAM, 0);
-                            socket_connect($sock, $host, $port);
-
-                            socket_write($sock, $msg, strlen($msg));
-
-                            $reply = socket_read($sock, 1924);
-                            $reply = trim($reply);
-                            $reply = "Server says:\n" . $reply;
-                        }
-                        ?>
-                        <textarea ,type="text" class="feedback-body__message"
-                            placeholder="Server Reply:"><?php echo @$reply; ?></textarea>
-                        <button type="submit" name="btnSend" class="feedback-body__submit">SEND</button>
-                    </form>
-
+            <div class="feedback-card">
+                <div class="feedback-header">
+                    Simple Chat Client
                 </div>
+
+                <form method="POST" class="feedback-body">
+                    <textarea ,type="text" class="feedback-body__email" placeholder="Client Message"
+                        name="txtMessage"></textarea>
+                    <?php
+                    $host = "127.0.0.1";
+                    $port = 50001;
+                    set_time_limit(0);
+                    if (isset($_POST["btnSend"])) {
+
+                        $msg = $_REQUEST["txtMessage"];
+                        $sock = socket_create(AF_INET, SOCK_STREAM, 0);
+                        socket_connect($sock, $host, $port);
+
+                        socket_write($sock, $msg, strlen($msg));
+
+                        $reply = socket_read($sock, 1924);
+                        $reply = trim($reply);
+                        $reply = "Server says:\n" . $reply;
+                    }
+                    ?>
+                    <textarea ,type="text" class="feedback-body__message"
+                        placeholder="Server Reply:"><?php echo @$reply; ?></textarea>
+                    <button type="submit" name="btnSend" class="feedback-body__submit">SEND</button>
+                </form>
+
             </div>
-       
-        
+        </div>
+
+
     </center>
 
 
@@ -206,7 +206,7 @@
                 $yes = $_POST["work$x"];
                 $in = $_POST["in$x"];
                 $out = $_POST["out$x"];
-                $countwork = rand(1000,10000);
+                $countwork = rand(1000, 10000);
                 mysqli_query($DBConnect, "INSERT INTO tbldtr (empid, startmonth, startday, startyear, endday, endmonth, endyear, work0, logid, inlog, outlog) VALUES ('$eid', '$smonth', '$sday', '$syear', '$eday', '$emonth', '$eyear', '$yes', '$countwork', '$in', '$out')");
             }
         }
