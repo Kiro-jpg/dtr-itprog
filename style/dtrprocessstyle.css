@@ -101,3 +101,85 @@
         display: block;
     }
 }
+
+
+.chatcont {
+    font-family: "Roboto", sans-serif;
+    margin-top: 45rem;
+    margin-left: 21.5rem;
+    background-color: #a2a2a2;
+    display: grid;
+    justify-content: right;
+    flex-direction: row;
+    height: 100px;
+}
+
+
+.feedback-body__email:focus,
+.feedback-body__message:focus,
+.feedback-body__submit:focus {
+    outline: none;
+}
+
+
+.feedback-card {
+    border: 1px solid black;
+    max-width: 980px;
+    background-color: #fff;
+    margin: 0 auto;
+    box-shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
+}
+
+.feedback-header {
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 1px solid black;
+}
+
+.feedback-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-body__submit {
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    background-image: none;
+    background-color: #dadad3;
+    box-shadow: none;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.feedback-body__message {
+    margin-top: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    background-image: none;
+    background-color: #dadad3;
+    box-shadow: none;
+    padding: 5px;
+    min-height: 50px;
+    resize: vertical;
+}
+
+.feedback-body button {
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+.feedback-body__email {
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    background-image: none;
+    background-color: #dadad3;
+    box-shadow: none;
+    padding: 5px;
+}
+
+.big {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
