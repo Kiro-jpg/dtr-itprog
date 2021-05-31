@@ -1,3 +1,6 @@
+<?php
+session_start()
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,16 +32,16 @@
    
     mysqli_select_db($DBConnect, "dbemployee");
     $query = mysqli_query($DBConnect, "SELECT * FROM tbldtr WHERE empid = $empid");
-    $table = mysqli_query($DBConnect, "SELECT * FROM tblemployee WHERE empid = $empid");
-    $retrieve = mysqli_fetch_array($table);
+    // $table = mysqli_query($DBConnect, "SELECT * FROM tblemployee WHERE empid = $empid");
+    // $retrieve = mysqli_fetch_array($table);
 
-    $name = $retrieve["empname"];
+    // $name = $retrieve["empname"];
     
     $count = 0;
         
         $hinmour = 0;
         $overmour = 0;
-   echo '<h2>Data for '. $name.'</h2>';
+   //echo '<h2>Data for '. $name.'</h2>';
    echo '<div class="wrapper">';
    echo '<div class="table">';
    echo '<div class="row header green">';

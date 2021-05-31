@@ -1,3 +1,6 @@
+<?php
+session_start()
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,7 +97,7 @@
                             mysqli_query($DBConnect, "UPDATE tbldtr SET startday='$sday1', startmonth='$smonth1',
                         startyear='$syear1', endday='$eday1', endmonth='$emonth1', endyear='$eyear1', inlog='$timein', outlog='$timeout', work0='$work' WHERE logid='$id'") or die(mysqli_error());
 
-                            echo "<h3>Record has been saved. Please check the modification below.</h3>";
+                            echo "<h3>Record has been saved. Please check the modification.</h3>";
                        
                         
                         }
