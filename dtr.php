@@ -4,7 +4,7 @@ $user = $_SESSION['getLogin'];
 
 if ($user == NULL) {
 
-    $message = "wrong answer";
+    $message = "Please Login Again";
     echo "<script type='text/javascript'>alert('$message');</script>";
     echo "<script type='text/javascript'>window.location = '/ITPROG/REPO/dtr-itprog/login.php';</script>";
     //header("location:login.php"); 
