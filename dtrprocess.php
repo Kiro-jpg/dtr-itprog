@@ -214,6 +214,15 @@
             //     echo "Employee Gender : " . $fetch["empgender"] . "<br />";
             //}
             ?>
+            <div class="chatcont">
+                <div class="feedback-card">
+                    <div class="feedback-header">
+                        Simple Chat Client
+                    </div>
+
+                    <form method="POST" class="feedback-body">
+                        <textarea ,type="text" class="feedback-body__email" placeholder="Client Message"
+                            name="txtMessage"></textarea>
 
     </center>
 
