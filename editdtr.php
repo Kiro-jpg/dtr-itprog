@@ -108,7 +108,7 @@ session_start()
         <div class="concon3">
             <!--Delete---->
             <form action='<?php echo $_SERVER["PHP_SELF"]; ?>' method='post' class="delform">
-                Search Employee : <input type='text' name='logID' size='10' class="indel" /><br />
+                Delete Log: <input type='text' name='logID' placeholder="Log ID" size='10' class="indel" /><br />
                 <input type='submit' name='delete' value='Delete'>
             </form>
             <?php
@@ -129,7 +129,7 @@ session_start()
             ?>
             <!--View-->
             <form action="/ITPROG/REPO/dtr-itprog/dtrdata.php" method='post'>
-                Search Employee ID : <input type='text' name='dtrID' size='10' /><br />
+                View Employee Log : <input type='text' placeholder="Employee ID" name='dtrID' size='10' /><br />
                 <input type='submit' name='view' value='View DTR'>
             </form>
         </div>

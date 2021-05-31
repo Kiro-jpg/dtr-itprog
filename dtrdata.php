@@ -21,7 +21,7 @@ session_start()
     <nav role="navigation" class="primary-navigation">
         <ul>
             <li class="homenav"><a href="/ITPROG/REPO/dtr-itprog/login.php">Home</a></li>
-            <li class="nav123"><a href=" /ITPROG/REPO/dtr-itprog/dtr.php">DTR</a></li>
+            <li class="nav123"><a href=" /ITPROG/REPO/dtr-itprog/editdtr.php">Edit DTR</a></li>
             <li class="nav123"><a href="/ITPROG/REPO/dtr-itprog/dashboard.php">Dashboard</a></li>
             <li class="nav123"><a href="/ITPROG/REPO/dtr-itprog/logout.php">Logout</a></li>
         </ul>
