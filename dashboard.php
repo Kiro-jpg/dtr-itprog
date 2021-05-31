@@ -64,9 +64,7 @@
 
                 <!-- ADD -->
                 <div class="btnbtn" data-title="Active">
-                    <!-- <button type="button" class="modbtn1" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        data-bs-whatever="Add">Add</button> -->
-                        <button class="modbtn1" ><a href="/ITPROG/REPO/dtr-itprog/editdash.php" target="_Blank">Modify</a></button>
+                        <button class="modbtn1" ><a href="/ITPROG/REPO/dtr-itprog/editdash.php">Modify</a></button>
                 
                 </div>
 

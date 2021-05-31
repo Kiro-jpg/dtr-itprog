@@ -144,12 +144,11 @@
         echo '</div>';
         ?>
 
-        <div class="btnbtn" data-title="Active"><button class="modbtn1" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">Add</button>
-        </div>
         
-           
-            <div class="chatcont">
+
+<button class="modbtn1" ><a href="/ITPROG/REPO/dtr-itprog/editdtr.php" target="_Blank">Modify</a></button>
+        <!-- Modal -->
+        <div class="chatcont">
                 <div class="feedback-card">
                     <div class="feedback-header">
                         Simple Chat Client
@@ -158,7 +157,32 @@
                     <form method="POST" class="feedback-body">
                         <textarea ,type="text" class="feedback-body__email" placeholder="Client Message"
                             name="txtMessage"></textarea>
+                        <?php
+                        $host = "127.0.0.1";
+                        $port = 50001;
+                        set_time_limit(0);
+                        if (isset($_POST["btnSend"])) {
 
+                            $msg = $_REQUEST["txtMessage"];
+                            $sock = socket_create(AF_INET, SOCK_STREAM, 0);
+                            socket_connect($sock, $host, $port);
+
+                            socket_write($sock, $msg, strlen($msg));
+
+                            $reply = socket_read($sock, 1924);
+                            $reply = trim($reply);
+                            $reply = "Server says:\n" . $reply;
+                        }
+                        ?>
+                        <textarea ,type="text" class="feedback-body__message"
+                            placeholder="Server Reply:"><?php echo @$reply; ?></textarea>
+                        <button type="submit" name="btnSend" class="feedback-body__submit">SEND</button>
+                    </form>
+
+                </div>
+            </div>
+       
+        
     </center>
 
 
@@ -170,22 +194,20 @@
 
     if (isset($_POST["enter"])) {
         $eid = $_POST["empid"];
-        $ename = $_POST["empname"];
         $smonth = $_POST["startmonth"];
         $sday = $_POST["startday"];
         $syear = $_POST["startyear"];
         $emonth = $_POST["endmonth"];
         $eday = $_POST["endday"];
         $eyear = $_POST["endyear"];
-        $countwork = 0;
 
         for ($x = 0; $x <= 5; $x++) {
             if ($_POST["work$x"] != null) {
                 $yes = $_POST["work$x"];
                 $in = $_POST["in$x"];
                 $out = $_POST["out$x"];
-                $countwork++;
-                mysqli_query($DBConnect, "INSERT INTO tbldtr (empid, empname, startmonth, startday, startyear, endday, endmonth, endyear, work0, logid, inlog, outlog) VALUES ('$eid', '$ename', '$smonth', '$sday', '$syear', '$eday', '$emonth', '$eyear', '$yes', '$countwork', '$in', '$out')");
+                $countwork = rand(1000,10000);
+                mysqli_query($DBConnect, "INSERT INTO tbldtr (empid, startmonth, startday, startyear, endday, endmonth, endyear, work0, logid, inlog, outlog) VALUES ('$eid', '$smonth', '$sday', '$syear', '$eday', '$emonth', '$eyear', '$yes', '$countwork', '$in', '$out')");
             }
         }
     } else {

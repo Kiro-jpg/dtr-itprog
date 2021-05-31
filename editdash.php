@@ -17,7 +17,7 @@
 
 
 
-    <nav role="navigation" class="primary-navigation">
+<nav role="navigation" class="primary-navigation">
         <ul>
             <li class="homenav"><a href="/ITPROG/REPO/dtr-itprog/login.php">Home</a></li>
             <li class="nav123"><a href=" /ITPROG/REPO/dtr-itprog/dtr.php">DTR</a></li>
@@ -25,6 +25,8 @@
             <li class="nav123"><a href="/ITPROG/REPO/dtr-itprog/logout.php">Logout</a></li>
         </ul>
     </nav>
+
+<!--Add---->
 <form action='<?php echo $_SERVER["PHP_SELF"]; ?>' method='post'>
     Enter ID: <input type="text" name="empid" size="8" /><br />
     Enter Name: <input type="text" name="empname" size="10" /><br />
@@ -55,7 +57,7 @@
                                     }
 ?>
 
-
+<!--Edit---->
 <form action='<?php echo $_SERVER["PHP_SELF"]; ?>' method='post'>
                                         Search Employee : <input type='text' name='eid' size='10' /><br />
                                         <input type='submit' name='search' value='Search'>
@@ -115,7 +117,7 @@
                         }
                         ?>
 
-
+<!--Delete-->
 <form action='<?php echo $_SERVER["PHP_SELF"]; ?>' method='post'>
                                         Search Employee : <input type='text' name='empID' size='10' /><br />
                                         <input type='submit' name='delete' value='Delete'>
