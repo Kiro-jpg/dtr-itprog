@@ -119,7 +119,7 @@
             mysqli_query($DBConnect, "UPDATE tblemployee SET empname='$newName', empstatus='$newStat',
                         empgender='$newGender', usercred='$newUser', pwd='$newPass' WHERE empid='$newID'") or die(mysqli_error());
 
-            echo "<h3 class='msg2'>Record has been saved. Please check the modification below.</h3>";
+            echo "<h3 class='msg2'>Record has been saved. Please check the modification.</h3>";
         }
         ?>
 
